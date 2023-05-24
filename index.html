@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Laba9</title>
+    <style>
+      .zakaz {
+        background-image: radial-gradient(circle at 12.5% 5.31%, #dca1d3 0, #e29fcc 7.14%, #e89ec5 14.29%, #ec9cbd 21.43%, #ef9cb5 28.57%, #f19cad 35.71%, #f29ca5 42.86%, #f29d9d 50%, #f19e96 57.14%, #efa08f 64.29%, #eca288 71.43%, #e8a483 78.57%, #e3a77e 85.71%, #ddaa7a 92.86%, #d7ac77 100%);
+      border-radius: 7px;
+      border: 1px solid;
+      border-color: #b0aeaeca;
+      box-shadow: 14px 15px 33px 5px rgba(34, 60, 80, 0.2);
+      }
+
+      table {
+        margin: 15px;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        border: 1px solid;
+        border-color: #b0aeaeca;
+        border-collapse: collapse;
+        padding: 3px;
+      }
+
+      input {
+        border: solid white;
+        width: 200px;
+      }
+
+      .button-24 {
+        background: #FF4742;
+        border: 1px solid #FF4742;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 16px;
+        outline: 0; 
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+      }
+
+      .button-24:hover,
+      .button-24:active {
+        background-color: initial;
+        background-position: 0 0;
+        color: #FF4742;
+      }
+
+      .button-24:active {
+        opacity: .5;
+      }
+    </style>
+  </head>
+  <body>
+    <form id='forma'>
+      <table class="zakaz">
+        <thead>
+          <tr>
+            <th colspan="2">Доставка кави</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              ПІБ
+            </td>
+            <td>
+              <input type="text" name='pib' placeholder="Текстове поле">
+            </td>
+          </tr>  
+
+          <tr>
+            <td>
+              Адреса
+            </td>
+            <td>
+              <input type="text" name='home' placeholder="Текстове поле">
+            </td>
+          </tr> 
+          
+          <tr>
+            <td>Телефон</td>
+            <td>
+              <input type="tel" name="phone" pattern="[0-9]{10}" required placeholder="Введіть номер починаючи з 0">
+            </td>
+          </tr> 
+          
+          <tr>
+            <td>E-mail</td>
+            <td>
+              <input type="email" name="email" pattern=".+@gmail\.com" size="30" required placeholder="Поле gmail пошти">
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Вид кави</td>
+            <td>
+              <select name='type'>
+                  <option selected>Select one...</option>
+                  <option value="Лате">Лате</option>
+                  <option value="Капучіно">Капучіно</option>
+                  <option value="Еспресо">Еспресо</option>
+            </select>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Кількість</td>
+            <td>
+              <input type="number" min='0' name='number' placeholder="Поле для вводу цифр">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type='submit' class="button-24">Підтвердити</button>
+            </td>
+          </tr>
+      </tbody>
+      </table>
+      
+      <table id="table">
+        <tbody>
+            <tr>
+                <td>ПІБ</td>
+                <td>Адреса</td>
+                <td>Телефон</td>
+                <td>E-mail</td>
+                <td>Вид кави</td>
+                <td>Кількість</td>
+        </tbody>
+      </table>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
